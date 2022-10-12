@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     label
+        {
+            float:left;  
+            margin-left: 4%;
+            
+         }
+        .b1
+        {
+               margin-left: 35%;  
+               width: 100%;     
+              
+               
+        }
+        b
+          {
+                margin-left: 3%;
+                 
+          }
+          .a1
+              {    margin-left: 35%;
+                    width: 40%;
+                   background-color:lightgreen; 
+                }
+
+               .b2
+                {
+                 background-color: aliceblue;
+                }
+               input
+               {
+                width: 50%; 
+                
+               }      
+               textarea
+               {
+                width: 60%;
+               }
+               .b2
+                 {
+                    display: flex;
+                 } 
+              .q1
+              {
+                margin-left: 40%;
+                                
+              }             
+            
+    </style>
+</head>
+<body>
+    <form method="get" class="a1" >
+    <b>Step 1 : Yours Details:</b><br><br>
+        <div class="v1">
+         <label>Name</label>
+       <div  class="b1">  
+        <input type="text" name="name" placeholder="First and last name" ><br><br>
+        </div>    
+    </div>
+     <div>
+        <label>Email</label>
+      </div>
+      <div class="b1">
+          <input type="email" name="email" placeholder="Enter Your Email Address"><br><br>
+        </div>
+        <div>
+       <label>Phone</label>
+       </div>
+       <div class="b1">
+        <input type="number" name="number" placeholder="Eg:+91 123456789"><br>
+       </div> 
+    <br>
+    <div>
+        <b>Step 2: Delivery Address:</b><br><br>
+            <label>Address</label>
+          <div  class="b1">  
+           <textarea name="Address"></textarea><br><br>
+           </div>   
+           <div>
+                <label>Post Code</label>
+              <div  class="b1">  
+               <input type="number" name="post code"><br><br>
+               </div>   
+               <label>Country</label>
+               <div  class="b1">  
+                <input type="text" name="country"><br><br>
+                </div>   
+            <div>
+                <b>Step 3 : Card Details</b><br><br>
+                <label>Card Type</label><br>
+                <div class="b2">
+                 <input type="radio" name="Card Type">Visa
+                 <input type="radio" name="Card Type">Amex
+                 <input type="radio" name="Card Type">MasterCard
+                 </div><br>
+                 <label>Card Number</label>
+                 <div  class="b1">
+                 <input type="number" name="card nummber" ><br><br>
+                </div>
+                    <label>Security Code</label>
+                    <div  class="b1">
+                 <input type="password" name="security code" ><br><br>
+                </div>
+               
+                    <label>Name On card</label>
+                    <div  class="b1">
+                <input type="Text" name="Name on card" ><br><br>
+               </div>
+               <div class="q1">
+               <input type="button" name="button" value="BUY IT!">
+               </div>
+                </div>
+   </form>
+   </body>
+</html>
