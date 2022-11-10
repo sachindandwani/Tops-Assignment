@@ -1,0 +1,103 @@
+Online shopping
+
+Guest
+user
+Admin 
+
+
+
+1.Guest
+
+new registeration
+view product
+search register
+
+2.user
+
+login
+new registeration
+search register
+view product
+buy product and add to cart
+payment method
+online payment 
+cash on delivery
+order Placed
+logout
+
+3.Admin
+
+login
+add category
+add product
+manage order
+manage payment
+check feedback
+reports
+
+
+4.Login Page
+
+1.user
+2.order
+3.product
+4.login
+5.password
+6.id
+
+5.Order details
+
+1.price
+2.order_id
+3.product_id
+4.first_name
+5.last_name
+6.category_id
+7.price 
+8.discount_id
+9.company_code
+
+6.Delivery Address
+
+1.name
+2.descreption
+3.address_street_no
+4.address_street_alt
+5.address_city
+6.address_state
+7.address_postal_code
+8.address_country_code
+
+7.order status code
+
+1.status_code
+2.description
+
+8.order
+ 
+1.customer_id
+2.status_code_id
+3.customer Feedback
+
+9.order Item
+
+1.order_id
+2.product_id
+3.quantity
+4.price
+
+10.shopping cart item
+
+1.customer_id
+2.product_id
+3.quantity
+4.price
+
+11.shipment
+
+1.id
+2.order_id
+3.to_address
+4.from_address
+5.tracking_no
+
