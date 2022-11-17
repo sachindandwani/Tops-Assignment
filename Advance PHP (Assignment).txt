@@ -1,0 +1,238 @@
+1.Object-oriented programming (OOP) is a computer programming model that organizes software design around data, or objects, rather than functions and logic. An object can be defined as a data field that has unique attributes and behavior.
+
+OOP focuses on the objects that developers want to manipulate rather than the logic required to manipulate them. This approach to programming is well-suited for programs that are large, complex and actively updated or maintained. This includes programs for manufacturing and design, as well as mobile applications; for example, OOP can be used for manufacturing system simulation software.
+
+2.1) Objects: Objects are structures that contain both data and procedures. For example, a student is an object which has name and age,
+
+2) Class: A class is a template that explains the details of an object,
+
+3) Inheritance: Inheritance is a technique to re-use existing code again and again. Class that is inherited is called base class and a class which it inherits is called derived class,
+
+4) Polymorphism: Polymorphism means many, which is requesting the same operation to perform differently,
+
+5) Abstractions: It refers to displaying only essential features of the application and covering the details, 6) Encapsulation: It means wrapping the data and functions together into a class.
+
+
+3.class vs Interface
+
+class:
+
+1.The ‘class’ keyword is used to create a class.
+
+2.An object of a class can be created.
+
+3.Class doesn’t support multiple inheritance.
+
+4.A class can inherit another class.
+
+5.A class can be inherited by another class using the keyword ‘extends’.
+
+6.A class can contain constructors.
+
+7.It cannot contain abstract methods.
+
+8.Variables and methods can be declared using any specifiers like public, protected, default, private.
+
+Interface:
+
+1.The ‘interface’ keyword is used to create an interface.
+
+2.An object of an interface cannot be created.
+
+3.Interface supports multiple inheritance.
+
+4.An Interface cannot inherit a class.
+
+5.An Interface can be inherited by a class using the keyword ‘implements’ and it can be inherited by another interface using the keyword ‘extends’.
+
+6.An Interface cannot contain constructors.
+
+7.It consists of abstract methods only.
+
+8.Variables and methods are declared as public only.
+
+
+4.Overloading in PHP provides means to dynamically create properties and methods. These dynamic entities are processed via magic methods one can establish in a class for various action types.
+
+The overloading methods are invoked when interacting with properties or methods that have not been declared or are not visible in the current scope. The rest of this section will use the terms inaccessible properties and inaccessible methods to refer to this combination of declaration and visibility.
+
+
+5.The scope resolution operator also known as Paamayim Nekudotayim or more commonly known as the double colon is a token that allows access to static, constant, and overridden properties or methods of a class.
+
+It is used to refer to blocks or codes in context to classes, objects, etc. An identifier is used with the scope resolution operator. The most common example of the application of the scope resolution operator in PHP is to access the properties and methods of the class. 
+
+
+6.Scope Resolution
+
+The scope resolution operator also known as Paamayim Nekudotayim or more commonly known as the double colon is a token that allows access to static, constant, and overridden properties or methods of a class.
+
+It is used to refer to blocks or codes in context to classes, objects, etc. An identifier is used with the scope resolution operator. The most common example of the application of the scope resolution operator in PHP is to access the properties and methods of the class. 
+
+
+7.
+Interface
+
+1.Interface supports Multiple Inheritance
+
+2.Interface doesn't contains Data Member
+
+3.Interface doesn't Contain Constructer
+
+4.An Interface Contains Only Incomplete Member
+
+5.An Interface cannot have access modifiers by default everything is assumed as public
+
+6.Member of an interface can not be static
+
+Abstract Class
+
+1.Abstract class does not support multiple inhertance
+
+2.Abstract class contains Data Member
+
+3.Abstract class contains Constructer
+
+4.An Abstract class contains both complete and incomplete member
+
+5.An Abstract class can contains access Modifiers for the subs ,functions,
+properties
+
+6.Only Complete Member of abstract class can be static 
+
+8.
+Constructer:
+a class Person which has two properties, fname and lname, for this class we will define a constructor for initialising the class properties(variables) at the time of object creation.
+
+While earlier, we were using the -> operator to set value for the variables or used the setter methods, in case of a constructor method, we can assign values to the variables at the time of object creation.
+
+If a class has a constructor then whenever an object of that class is created, the constructor is called.
+
+Destructer:
+PHP Destructor method is called just before PHP is about to release any object from its memory. Generally, you can close files, clean up resources etc in the destructor method. Let's take an
+
+As we can see in the output above, as the PHP program ends, just before it PHP initiates the release of the object created, and hence the destructor method is called.
+
+The destructor method cannot accept any argument and is called just before the object is deleted, which happens either when no reference exist for an object or when the PHP script finishes its execution.
+
+9. How to Load Classes in PHP?
+
+PHP load classes are used for declaring its object etc. in object oriented applications. PHP parser loads it automatically, if it is registered with spl_autoload_register() function. PHP parser gets the least chance to load class/interface before emitting an error.
+
+10.When you create a new instance of the SavingAccount, PHP will call the constructor of the SavingAccount class. However, PHP cannot find the constructor in the SavingAccount class. Therefore, it continues to search for the constructor of the parent class of the SavingAccount class, which is the BankAccount class. And it invokes the constructor of the BankAccount class.
+
+11.Are Parent Constructor Called Implicitly When Create An ObjectOf Class?
+
+1.We can't run directly the parent class constructor in child class if the child class defines a constructor. In order to run a parent constructor, a call to parent::__construct() within the child constructor is required.
+<?php
+   class grandpa{
+      public function __construct(){
+         echo "I am in Tutorials Point"."
+";
+      }
+   }
+   class papa extends grandpa{
+      public function __construct(){
+         parent::__construct();
+         echo "I am not in Tutorials Point";
+      }
+   }
+$obj = new papa();
+?>
+
+
+2.If the child does not define a constructor then it may be inherited from the parent class just like a normal class method(if it was not declared as private).
+<?php
+   class grandpa{
+      public function __construct(){
+         echo "I am in Tutorials point";
+      }
+   }
+   class papa extends grandpa{
+   }
+   $obj = new papa();
+?>
+
+
+12. Constructors and Destructors
+
+Constructors are special member functions for initial settings of newly created object instances from a class, which is the key part of the object-oriented concept in PHP5.
+Constructors are the very basic building blocks that define the future object and its nature. You can say that the Constructors are the blueprints for object creation providing values for member functions and member variables.
+
+13.  What are PHP Magic Methods/Functions? List them write program for Static Keyword 
+in PHP?
+1.  __call()
+2.  __callStatic()
+3.  __get()
+4.  __set()
+5.  __isset()
+6.  __unset()	
+7.  __sleep()
+8.  __wakeup()
+9.  __serialize()
+10. __unserialize()
+11. __toString()
+12. __invoke()
+13. __set_state()
+14.  __clone()
+15.__debugInfo()
+
+14.Create multiple Traits and use it in to a single class?
+
+PHP only supports single inheritance: a child class can inherit only from one single parent.
+
+So, what if a class needs to inherit multiple behaviors? OOP traits solve this problem.
+
+Traits are used to declare methods that can be used in multiple classes. Traits can have methods and abstract methods that can be used in multiple classes, and the methods can have any access modifier (public, private, or protected).
+
+15.Write PHP Script of Object Iteration?
+
+<?php
+class MyClass
+{
+    public $var1 = 'value 1';
+    public $var2 = 'value 2';
+    public $var3 = 'value 3';
+
+    protected $protected = 'protected var';
+    private   $private   = 'private var';
+
+    function iterateVisible() {
+       echo "MyClass::iterateVisible:\n";
+       foreach ($this as $key => $value) {
+           print "$key => $value\n";
+       }
+    }
+}
+
+$class = new MyClass();
+
+foreach($class as $key => $value) {
+    print "$key => $value\n";
+}
+echo "\n";
+
+
+$class->iterateVisible();
+
+?>
+
+16.Use of The $this keyword
+
+$this is a reserved keyword in PHP that refers to the calling object. It is usually the object to which the method belongs, but possibly another object if the method is called statically from the context of a secondary object. This keyword is only applicable to internal methods.
+
+<?php
+class simple{
+  
+    public $k = 9;
+  
+    public function display(){
+        return $this->k;
+    }
+}
+  
+$obj = new simple();
+echo $obj->display();
+  
+?>
+
+17.
